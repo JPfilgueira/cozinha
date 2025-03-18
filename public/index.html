@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cozinha Deliciosa</title>
+  <style>
+    /* Reset de margens e paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #575757;
+      transition: background 0.3s ease;
+    }
+
+    section.hero {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1506784983877-45594e1a24f0'); /* Foto de cozinha */
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    section.hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    section.hero p {
+      font-size: 1.5rem;
+    }
+
+    section.recipes {
+      padding: 50px 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    section.recipes h2 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .recipe-card {
+      display: inline-block;
+      margin: 10px;
+      width: 30%;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .recipe-card:hover {
+      transform: scale(1.05);
+    }
+
+    .recipe-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .recipe-card h3 {
+      margin: 15px 0;
+    }
+
+    .recipe-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .recipe-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .recipe-card {
+        width: 100%;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cozinha Deliciosa</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Receitas</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bem-vindo à Cozinha Deliciosa!</h1>
+    <p>Descubra as melhores receitas para você e sua família.</p>
+  </section>
+
+  <section class="recipes">
+    <h2>Receitas Populares</h2>
+    <div class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1555685812-53f3a62c67b1" alt="Prato 1">
+      <h3>Feijoada</h3>
+      <p>Uma das melhores receitas da culinária brasileira, perfeita para um almoço em família.</p>
+      <button onclick="mostrarReceita('Feijoada')">Ver Receita</button>
+    </div>
+
+    <div class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1590964041984-8d23c0b9f949" alt="Prato 2">
+      <h3>Moqueca de Peixe</h3>
+      <p>Uma receita típica do litoral brasileiro, saborosa e saudável!</p>
+      <button onclick="mostrarReceita('Moqueca de Peixe')">Ver Receita</button>
+    </div>
+
+    <div class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1579036519021-9a18a55823bc" alt="Prato 3">
+      <h3>Pão de Queijo</h3>
+      <p>Um lanche delicioso para qualquer hora do dia. Acompanhe com um bom café.</p>
+      <button onclick="mostrarReceita('Pão de Queijo')">Ver Receita</button>
+    </div>
+  </section>
+
+  <script>
+    function mostrarReceita(nome) {
+      alert('Você escolheu a receita de ' + nome);
+    }
+  </script>
+</body>
+</html>
